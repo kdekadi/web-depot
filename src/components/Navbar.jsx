@@ -56,9 +56,11 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, '#beranda')}
           className="flex items-center gap-2 text-slate-900 font-bold text-xl tracking-tight"
         >
-          <div className="w-9 h-9 bg-sky-600 rounded-lg flex items-center justify-center text-white">
-            <Droplets className="w-5 h-5" />
-          </div>
+          <img
+            src="/logo-adi-tirta.png"
+            alt="Logo Depot Air Adi Tirta"
+            className="w-10 h-10 object-contain"
+          />
           <span>Depot <span className="text-sky-600">{depotData.shortName}</span></span>
         </a>
 

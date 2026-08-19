@@ -24,9 +24,11 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-2 text-white font-bold text-xl">
-              <div className="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center text-white">
-                <Droplets className="w-5 h-5" />
-              </div>
+             <img
+                src="/logo-adi-tirta.png"
+                alt="Logo Depot Air Adi Tirta"
+                className="w-10 h-10 object-contain"
+              />
               <span>{depotData.name}</span>
             </div>
             
@@ -94,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom Bar / Copyright */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {currentYear} {depotData.name}. All rights reserved.</p>
+          <p>© {currentYear} {depotData.name}.</p>
           <p>Jl. Bebengan No. 5, Br. Tubuh, Batubulan, Bali</p>
         </div>
 

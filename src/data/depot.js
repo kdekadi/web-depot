@@ -18,8 +18,8 @@ export const depotData = {
   waterProcess: "Reverse Osmosis (RO)",
   whatsappNumber: "6281337549437",
   whatsappDisplay: "0813-3754-9437",
-  googleMapsUrl: "https://maps.google.com/?q=Jl.+Bebengan+No.+5,+Batubulan",
-  image: "/images/depot-air-adi-tirta.webp",
+  googleMapsUrl: "https://maps.app.goo.gl/5JD8madsMkCuCrNc7",
+  image: "/images/gln.jpeg",
   websiteUrl: "https://depot-air-adi-tirta.vercel.app/",
 
   trustPoints: [

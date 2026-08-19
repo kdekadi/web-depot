@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
         className="flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-bold text-sm px-4 py-3 rounded-full shadow-lg transition-all"
       >
         <MessageSquare className="w-5 h-5 fill-current" />
-        <span className="hidden sm:inline">Pesan via WA</span>
+        <span className="hidden sm:inline">Tanya via WA</span>
         <span className="sm:hidden font-bold">WA?</span>
       </a>
     </div>

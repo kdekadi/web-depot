@@ -82,7 +82,7 @@ export default function Location() {
             </div>
 
             {/* Google Maps Link CTA */}
-            <div className="pt-4 border-t border-slate-100">
+            {/* <div className="pt-4 border-t border-slate-100">
               <a
                 href={depotData.googleMapsUrl}
                 target="_blank"
@@ -93,7 +93,7 @@ export default function Location() {
                 <span>Buka di Google Maps</span>
                 <ExternalLink className="w-4 h-4 text-slate-400" />
               </a>
-            </div>
+            </div> */}
 
           </div>
 

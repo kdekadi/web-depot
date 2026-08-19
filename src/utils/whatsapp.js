@@ -15,22 +15,51 @@ export function formatRupiah(amount) {
 
 /**
  * Membuat link WhatsApp dengan template pesan order
+ * Biaya antar Rp2.000 per pesanan (bukan per galon)
  * @param {Object} orderData
  * @returns {string}
  */
-export function buildWhatsAppLink({ name, qty, method, address, notes, totalCost }) {
+export function buildWhatsAppLink({ name, qty, method, address, notes }) {
   const cleanPhone = depotData.whatsappNumber.replace(/\D/g, '');
+  const isAntar = method === 'Antar';
+  const hargaAir = qty * depotData.pricePerGallon;
+  const biayaAntar = isAntar ? depotData.deliveryFee : 0;
+  const total = hargaAir + biayaAntar;
 
-  const message = `Halo Depot Air Adi Tirta, saya ingin memesan air isi ulang.
+  let message = '';
+
+  if (isAntar) {
+    message = `Halo ${depotData.name} 👋
+
+Saya ingin memesan air isi ulang.
 
 Nama: ${name.trim() || '-'}
 Jumlah: ${qty} galon
-Metode: ${method}
+Metode: Antar
 Alamat: ${address.trim() || '-'}
-Catatan: ${notes.trim() || '-'}
-Total: ${formatRupiah(totalCost)}
 
-Mohon dikonfirmasi. Terima kasih.`;
+Catatan: ${notes.trim() || '-'}
+
+Harga air: ${formatRupiah(hargaAir)}
+Biaya antar: ${formatRupiah(biayaAntar)}
+Total: ${formatRupiah(total)}
+
+Mohon dikonfirmasi. Terima kasih 🙏`;
+  } else {
+    message = `Halo ${depotData.name} 👋
+
+Saya ingin memesan air isi ulang.
+
+Nama: ${name.trim() || '-'}
+Jumlah: ${qty} galon
+Metode: Ambil di Depot
+
+Catatan: ${notes.trim() || '-'}
+
+Total: ${formatRupiah(total)}
+
+Mohon dikonfirmasi. Terima kasih 🙏`;
+  }
 
   return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
 }

@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
       >
         <MessageSquare className="w-5 h-5 fill-current" />
         <span className="hidden sm:inline">Pesan via WA</span>
-        <span className="sm:hidden font-bold">Pesan WA</span>
+        <span className="sm:hidden font-bold">WA?</span>
       </a>
     </div>
   );

@@ -1,8 +1,10 @@
 export const depotData = {
   name: "Depot Air Adi Tirta",
   shortName: "Adi Tirta",
+  type: "Depot Air Minum Isi Ulang",
   tagline: "Air isi ulang untuk kebutuhan sehari-hari.",
   pricePerGallon: 5000,
+  deliveryFee: 2000,
   address: "Jl. Bebengan No. 5, Br. Tubuh, Batubulan",
   village: "Batubulan",
   subdistrict: "Sukawati",
@@ -12,10 +14,13 @@ export const depotData = {
   openingHour: "07:00",
   closingHour: "18:00",
   openingDaysText: "Buka Setiap Hari",
+  waterSource: "Sumur Bor",
+  waterProcess: "Reverse Osmosis (RO)",
   whatsappNumber: "6281337549437",
   whatsappDisplay: "0813-3754-9437",
   googleMapsUrl: "https://maps.google.com/?q=Jl.+Bebengan+No.+5,+Batubulan",
-  deliveryNotes: "Untuk pertanyaan mengenai area pengantaran, Anda dapat mengonfirmasi via WhatsApp.",
+  image: "/images/depot-air-adi-tirta.webp",
+  websiteUrl: "https://depot-air-adi-tirta.vercel.app/",
 
   trustPoints: [
     {
@@ -26,8 +31,8 @@ export const depotData = {
     },
     {
       id: 2,
-      title: "Pelayanan Cepat",
-      desc: "Proses isi ulang cepat dan efisien agar Anda tidak perlu menunggu lama.",
+      title: "Proses RO",
+      desc: "Air diproses menggunakan sistem Reverse Osmosis (RO) sebelum digunakan sebagai air isi ulang.",
       iconName: "Zap"
     },
     {
@@ -49,7 +54,7 @@ export const depotData = {
       id: "isi-ulang",
       title: "Isi Ulang Galon",
       priceText: "Rp5.000 / galon",
-      description: "Air isi ulang berkualitas untuk memenuhi kebutuhan air minum harian rumah tangga Anda.",
+      description: "Air isi ulang untuk memenuhi kebutuhan air minum harian rumah tangga Anda.",
       iconName: "Droplet"
     },
     {
@@ -60,11 +65,11 @@ export const depotData = {
       iconName: "Smartphone"
     },
     {
-      id: "pengambilan-depot",
-      title: "Pengambilan di Depot",
-      priceText: "07.00 – 18.00 WITA",
-      description: "Datang langsung ke depot membawa galon kosong Anda untuk diisi ulang.",
-      iconName: "Store"
+      id: "antar",
+      title: "Layanan Antar",
+      priceText: "Biaya antar Rp2.000",
+      description: "Pesan antar ke alamat Anda dengan biaya tambahan Rp2.000 per pesanan.",
+      iconName: "Truck"
     }
   ],
 
@@ -76,8 +81,8 @@ export const depotData = {
     },
     {
       step: 2,
-      title: "Masukkan nama dan alamat",
-      desc: "Lengkapi data pemesan dan pilihan pengambilan."
+      title: "Pilih metode pengambilan",
+      desc: "Ambil di depot atau minta antar ke alamat Anda."
     },
     {
       step: 3,
@@ -97,20 +102,24 @@ export const depotData = {
       answer: "Harga air isi ulang di Depot Air Adi Tirta adalah Rp5.000 per galon."
     },
     {
+      question: "Apakah tersedia layanan antar?",
+      answer: "Ya, tersedia layanan antar dengan biaya tambahan Rp2.000 per pesanan. Misalnya, 2 galon + antar = Rp10.000 + Rp2.000 = Rp12.000."
+    },
+    {
       question: "Di mana lokasi Depot Air Adi Tirta?",
       answer: "Depot berlokasi di Jl. Bebengan No. 5, Br. Tubuh, Batubulan."
     },
     {
       question: "Jam berapa Depot Air Adi Tirta buka?",
-      answer: "Depot kami buka setiap hari dari pukul 07.00 hingga 18.00 WITA."
+      answer: "Depot buka setiap hari dari pukul 07.00 hingga 18.00 WITA."
+    },
+    {
+      question: "Dari mana sumber air yang digunakan?",
+      answer: "Air yang digunakan berasal dari sumber sumur bor dan diproses menggunakan sistem Reverse Osmosis (RO) sebelum digunakan sebagai air isi ulang."
     },
     {
       question: "Bagaimana cara memesan air?",
-      answer: "Anda bisa menggunakan formulir pemesanan online di website ini, lalu klik tombol 'Pesan Sekarang via WhatsApp'."
-    },
-    {
-      question: "Apakah bisa memesan melalui WhatsApp?",
-      answer: "Bisa. WhatsApp adalah metode utama pemesanan dan komunikasi kami agar lebih cepat dan praktis."
+      answer: "Anda bisa menggunakan formulir pemesanan di website ini, lalu klik 'Kirim Pesanan via WhatsApp'. Atau langsung datang ke depot."
     }
   ]
 };
